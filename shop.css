@@ -1,0 +1,59 @@
+
+.tablewrap {
+  display: grid;
+  grid-gap: 20px;
+}
+
+.live {
+  min-height: 400px;
+  background: url("lures.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 3rem;
+  box-shadow: var(--shadow);
+  color:#c5e5f0;
+  border: solid black 2px;
+}
+
+.cold {
+  min-height: 400px;
+  background: url("tboxes.jpeg");
+  background-size: cover;
+  padding: 3rem;
+  box-shadow: var(--shadow);
+  color: #c5e5f0;
+  text-align: center;
+  border: solid black 2px;
+}
+
+.livefish {
+  min-height: 400px;
+  background: url("bass.jpeg");
+  background-size: cover;
+  padding: 3rem;
+  border: solid black 2px;
+  color: #c5e5f0;
+}
+
+.food {
+  min-height: 400px;
+  background: url("grill.jpeg");
+  background-size: cover;
+  padding: 3rem;
+  box-shadow: var(--shadow);
+  color: #c5e5f0;
+  text-align: center;
+  border: solid black 2px;
+}
+table {
+  width: 55%;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  border: 2px black;
+}
+
+th, td {
+  padding-right: 15px;
+}

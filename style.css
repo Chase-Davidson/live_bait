@@ -1,0 +1,204 @@
+/* Chase Davidson CSS 3/1/2021 */
+
+:root {
+  --primary: #1ca3ec;
+  --dark: #2389da;
+  --light: #5ABCD8;
+  --shadow: 0 2px 8px rgba(104, 104, 104, 0.7);
+}
+
+html {
+  box-sizing: border-box;
+  font-family: 'Eagle Lake', cursive;
+  color: var(--dark);
+  background-color: #0f5e9c;
+
+}
+
+body {
+  margin: 30px 50px;
+  line-height: 1.4;
+}
+
+.btn {
+  background-color: var(--dark);
+  color: black;
+  padding: 0.6rem 1.3rem;
+  text-decoration: none;
+  border: 0;
+}
+
+
+.wrapper {
+  display: grid;
+  grid-gap: 10px;
+  grid-auto-rows: auto;
+
+}
+
+.main-nav ul {
+  display: grid;
+  grid-gap: 20px;
+  list-style: none;
+  padding: 0;
+  grid-template-columns: repeat(4,1fr);
+}
+
+
+.main-nav a{
+  background: var(--primary);
+  display:block;
+  text-decoration: none;
+  padding: 0.5rem;
+  text-align:center;
+  color: black;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  box-shadow: var(--shadow);
+}
+
+.main-nav a:hover{
+  background: var(--dark);
+  color: var(--light);
+}
+
+.mainadd {
+  display: grid;
+  grid-gap: 20px;
+  /*grid-template-columns: 2fr 1fr;*/
+  grid-template-areas:
+   'add add addright'
+   'add add addright';
+}
+
+.add {
+  grid-area: add;
+  min-height: 400px;
+  background: url("lakelife.jpg");
+  background-size: cover;
+  padding: 5px;
+  box-shadow: var(--shadow);
+}
+
+.add h1 {
+  font-size: 5rem;
+  color: black;
+}
+
+.add p {
+  font-size: 2rem;
+  margin-top: 0px;
+  color: #0f5e9c;
+}
+
+.addright {
+  display: grid;
+  background: var(--primary);
+  box-shadow: var(--shadow);
+  padding:1rem;
+  justify-items: center;
+  grid-area: addright;
+  color: black;
+}
+
+.addright ul {
+  padding: 20px;
+}
+
+.addright ul li {
+padding: 10px;
+}
+
+.fish {
+  display: grid;
+  grid-gap: 20px;
+  /* grid-template-columns: repeat(auto-fit, minmax(200px, 5fr)); */
+  background: var(--primary);
+  text-align: center;
+  padding: 2rem 2rem;
+  box-shadow: var(--shadow);
+  grid-template-columns: 1fr 1fr 2fr 1fr;
+  grid-template-rows: minmax(400px, auto);
+}
+
+.tackle{
+  background-image: url(tackle.jpeg);
+  background-size: cover;
+  color: black;
+}
+
+.livebait {
+  background-image: url("livebait.jpeg");
+  background-size: cover;
+  color: black;
+}
+
+.memories {
+  background-image: url("family.jpeg");
+  background-size: cover;
+  max-width: 100%;
+  color: black;
+}
+
+.camp {
+  background-image: url("camp.jpeg");
+  max-width: 100%;
+  max-height: 100%;
+  background-size: cover;
+  max-width: 100%;
+  color: black;
+}
+
+.boxes {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 3fr));
+  background: var(--primary);
+  text-align: center;
+  padding: 1.5rem 2rem;
+  box-shadow: var(--shadow);
+}
+
+.box {
+  border: solid 2px;
+  border-color: black;
+  padding: 3px;
+  color: black;
+}
+footer {
+  margin-top: 20px;
+  background: var(--dark);
+  color: var(--light);
+  text-align: center;
+  font-size: 16pt;
+  padding: 2rem;
+}
+
+@media screen and (max-width:700px)
+{
+  .mainadd{
+    grid-template-areas:
+    'add'
+    'addright'
+  }
+  .main-nav ul {
+    grid-template-columns: 1fr;
+  }
+  .fish{
+    grid-template-columns: 1fr;
+  }
+
+}
+
+@@media(max-width:500px)
+{
+  .mainadd {
+    grid-template-areas:
+    'add'
+    'addright';
+  }
+  .fish {
+    grid-template-columns: 1fr;
+  }
+
+}
